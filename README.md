@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a university project developed using **ASP.NET Core MVC** and **SQL Server**. The application simulates a complete billing and client management system for a telecom service provider. It features role-based functionality for different types of users.
+This is a mid-course small university project developed using **ASP.NET Core MVC** and **SQL Server**. The application simulates a complete billing and client management system for a telecom service provider. It features role-based functionality for different types of users.
 
 ## Features
 
