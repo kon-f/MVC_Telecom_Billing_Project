@@ -1,19 +1,19 @@
-# Mobile Client Billing & Management Web Application
+# Telecom Client Billing & Management Web Application
 
 ## Overview
 
-This is a university project developed using **ASP.NET Core MVC** and **SQL Server**. The application simulates a complete billing and client management system for a mobile phone service provider. It features role-based functionality for different types of users.
+This is a university project developed using **ASP.NET Core MVC** and **SQL Server**. The application simulates a complete billing and client management system for a telecom service provider. It features role-based functionality for different types of users.
 
 ## Features
 
 ### 🔐 Login
 - Basic login form for all users.
-- Session/role management not implemented.
+- Session/role management not fully implemented.
 
 ### 👤 Client
 - View personal bills
 - View call history
-- Pay bills (logic can be extended)
+- Pay bills 
 
 ### 🧑‍💼 Seller
 - Register new clients
@@ -39,7 +39,7 @@ The project follows the **Model-View-Controller (MVC)** design pattern:
 - ASP.NET Core MVC
 - C# (.NET 6 or later)
 - Entity Framework Core
-- SQL Server 2022
+- Microsoft SQL Server 2022
 - Visual Studio 2022
 
 ## Getting Started
@@ -67,7 +67,80 @@ The project follows the **Model-View-Controller (MVC)** design pattern:
 
 ## Screenshots
 
-(Add interface images here)
+### 🔐 Login Page
+![LoginPage](screenshots/5_Login.png)
+
+### ❌ Failed Login
+![FailedLogin](screenshots/6_Fail_Login.png)
+
+### 👑 Admin Logged In
+![AdminLogin](screenshots/7_Admin_Menu.png)
+
+### 📃 List Existing Sellers
+![Sellers](screenshots/8_List_Existing_Sellers.png)
+
+### ➕ Create Seller
+![CreateSeller](screenshots/9_Create_Seller.png)
+
+### ⚠️ Create Seller Fail
+![CreateSellerFail](screenshots/9_FaiI.png)
+
+### ✅ Seller Created
+![SellerCreated](screenshots/10_Seller_Created.png)
+
+### ⚙️ Modify Programs
+![ModifyPrograms](screenshots/11_Modify_Programs.png)
+
+### 📝 Modified Programs
+![ModifiedPrograms](screenshots/12_Modified_Programs.png)
+
+### ➕ Create Program
+![CreateProgram](screenshots/13_Create_Program.png)
+
+### ❌ Create Program Fail
+![CreateProgramFail](screenshots/13_Create_Program_Fail.png)
+
+### 📋 View New Programs
+![NewPrograms](screenshots/14_New_Programs.png)
+
+### 👤 Client Menu
+![ClientMenu](screenshots/15_Client_Menu.png)
+
+### 📞 Call History
+![CallHistory](screenshots/16_Call_History.png)
+
+### 📄 View Bills
+![ViewBills](screenshots/17_View_Bills.png)
+
+### 💳 Pay Bill
+![PayBill](screenshots/18_Pay_Bill.png)
+
+### 🧾 Seller Menu
+![SellerMenu](screenshots/19_Seller_Menu.png)
+
+### 🔄 Change Client Program
+![ChangeClientProgram](screenshots/20_Change_Client_Program.png)
+
+### ✅ Client Program Changed
+![ClientProgramChanged](screenshots/21_Changed_Client_Program.png)
+
+### ➕ Add Client
+![AddClient](screenshots/22_Add_Client.png)
+
+### ❌ Add Client Fail
+![AddClientFail](screenshots/22_Add_Client_Fail.png)
+
+### ✅ Client Added
+![ClientAdded](screenshots/23_Client_Added.png)
+
+### 🧾 Issue Bill
+![IssueBill](screenshots/24_Issue_Bill.png)
+
+### 📭 No Bills Available
+![NoBills](screenshots/25_No_Bills.png)
+
+### 📬 Bills Available
+![YesBills](screenshots/25_Yes_Bills.png)
 
 ## Notes
 
