@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Create Seller";
+}
+
+<h2>Create Seller</h2>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div style="color: red;">@ViewBag.ErrorMessage</div>
+}
+<form method="post" action="/Admin/CreateSeller">
+    <label>First Name:</label>
+    <input type="text" name="firstName" required />
+    <br />
+    <label>Last Name:</label>
+    <input type="text" name="lastName" required />
+    <br />
+    <label>Username:</label>
+    <input type="text" name="username" required />
+    <br />
+    <label>Password:</label>
+    <input type="text" name="password" required />
+    <br />
+    <button type="submit">Create Seller</button>
+</form>

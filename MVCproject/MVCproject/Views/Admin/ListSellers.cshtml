@@ -1,0 +1,21 @@
+﻿<h2 class="text-center my-4">List of Sellers</h2>
+
+<table class="table table-bordered table-striped">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">Seller ID</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var seller in Model)
+        {
+            <tr>
+                <td>@seller.Seller_ID</td>
+                <td>@seller.User.First_Name</td>
+                <td>@seller.User.Last_Name</td>
+            </tr>
+        }
+    </tbody>
+</table>

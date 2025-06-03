@@ -1,0 +1,30 @@
+﻿<h2>Your Bills</h2>
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Costs</th>
+            <th>Paid</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var bill in Model)
+        {
+            <tr>
+                <td>@bill.Bill_ID</td>
+                <td>@bill.Costs</td>
+                <td>@(bill.Paid ? "Yes" : "No")</td>
+                <td>
+                    @if (!bill.Paid)
+                    {
+                        <form method="post" action="/Client/PayBill">
+                            <input type="hidden" name="billId" value="@bill.Bill_ID" />
+                            <button type="submit">Pay</button>
+                        </form>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

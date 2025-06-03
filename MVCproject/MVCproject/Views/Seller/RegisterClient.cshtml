@@ -1,0 +1,33 @@
+﻿<h2>Register New Client</h2>
+@if (!ViewData.ModelState.IsValid)
+{
+    <div style="color: red;">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+<form method="post" action="/Seller/RegisterClient">
+    <label>First Name:</label>
+    <input type="text" name="firstName" required />
+    <br />
+    <label>Last Name:</label>
+    <input type="text" name="lastName" required />
+    <br />
+    <label>Username:</label>
+    <input type="text" name="username" required />
+    <br />
+    <label>Password:</label>
+    <input type="text" name="password" required />
+    <br />
+    <label>AFM:</label>
+    <input type="text" name="afm" required />
+    <br />
+    <label>Phone Number:</label>
+    <input type="text" name="phoneNumber" required />
+    <br />
+    <button type="submit">Register</button>
+</form>

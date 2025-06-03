@@ -1,0 +1,33 @@
+﻿<h2 class="text-center my-4">Change Client Program</h2>
+<table class="table table-bordered table-striped">
+    <thead class="table-dark text-center">
+        <tr>
+            <th>Client Name</th>
+            <th>Phone Number</th>
+            <th>Current Program</th>
+            <th>New Program</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var client in Model)
+        {
+            <tr>
+                <td class="align-middle">@client.FirstName @client.LastName</td>
+                <td class="align-middle">@client.PhoneNumber</td>
+                <td class="align-middle">@client.CurrentPlan</td>
+                <td class="align-middle">
+                    <form method="post" action="/Seller/ChangeClientPlan" class="d-flex align-items-center">
+                        <input type="hidden" name="phoneNumber" value="@client.PhoneNumber" />
+                        <select name="planName" class="form-select me-2" required>
+                            @foreach (var plan in ViewBag.Plans)
+                            {
+                                <option value="@plan.ProgramName">@plan.ProgramName</option>
+                            }
+                        </select>
+                        <button type="submit" class="btn btn-primary">Modify</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

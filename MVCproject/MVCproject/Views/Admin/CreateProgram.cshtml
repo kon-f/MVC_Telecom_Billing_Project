@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Create Program";
+}
+
+<h2>Create Program</h2>
+
+@if (ViewBag.ErrorMessage != null)
+{
+    <div style="color: red;">@ViewBag.ErrorMessage</div>
+}
+<form method="post" action="/Admin/CreateProgram">
+    <label>Program Name:</label>
+    <input type="text" name="programName" required />
+    <br />
+    <label>Benefits:</label>
+    <textarea name="benefits" required></textarea>
+    <br />
+    <label>Charge:</label>
+    <input type="number" step="0.01" name="charge" required />
+    <br />
+    <button type="submit">Create Program</button>
+</form>

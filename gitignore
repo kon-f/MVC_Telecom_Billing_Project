@@ -1,0 +1,37 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+
+# Rider project files
+.idea/
+
+# ASP.NET Core
+appsettings.json
+appsettings.Development.json
+appsettings.Production.json
+
+# Logs
+*.log
+
+# Publish results
+*.publish/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Exclude user secrets if in use
+secrets.json
+
+# Optional - ignore test results or coverage reports
+TestResults/
+coverage/
+*.coverage
+
+# Node modules (if ever added)
+node_modules/

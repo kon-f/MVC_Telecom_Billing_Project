@@ -1,0 +1,19 @@
+﻿<h2>Call History</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Call ID</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var call in Model)
+        {
+            <tr>
+                <td>@call.Call_ID</td>
+                <td>@call.Description</td>
+            </tr>
+        }
+    </tbody>
+</table>
