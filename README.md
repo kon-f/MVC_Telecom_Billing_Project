@@ -51,10 +51,19 @@ The project follows the **Model-View-Controller (MVC)** design pattern:
 
 2. Open the solution in **Visual Studio 2022**.
 
-3. Copy the configuration template:
-   ```bash
-   cp appsettings.Template.json appsettings.json
-   ```
+3. Rename the configuration template:
+
+   Rename `appsettings.Template.json` to `appsettings.json`.
+
+   > On Linux/macOS, you can use:
+   > ```bash
+   > mv appsettings.Template.json appsettings.json
+   > ```
+
+   > On Windows, just rename the file manually or use PowerShell:
+   > ```powershell
+   > Rename-Item "appsettings.Template.json" "appsettings.json"
+   > ```
 
 4. Fill in your connection string in `appsettings.json`.
 
@@ -63,7 +72,7 @@ The project follows the **Model-View-Controller (MVC)** design pattern:
    dotnet ef database update
    ```
 
-6. Run the app using IIS Express or Kestrel.
+6. Run the app.
 
 ## Screenshots
 
