@@ -67,6 +67,9 @@ The project follows the **Model-View-Controller (MVC)** design pattern:
 
 ## Screenshots
 
+### Database Schema (Designed in Microsoft SQL Management Studio)
+![Database Schema](screenshots/DB_Schema.png)
+
 ### 🔐 Login Page
 ![LoginPage](screenshots/5_Login.png)
 
