@@ -1,4 +1,12 @@
 # Telecom Client Billing & Management Web Application
+![Static Badge](https://img.shields.io/badge/Platform-Web-blue)
+![Static Badge](https://img.shields.io/badge/Framework-ASP.NET%20MVC-purple)
+![Static Badge](https://img.shields.io/badge/ORM-Entity%20Framework%20Core-green)
+![Static Badge](https://img.shields.io/badge/Database-SQL%20Server-lightgrey)
+![Static Badge](https://img.shields.io/badge/Status-Completed-success)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Static Badge](https://img.shields.io/badge/Project%20Type-University%20Project-orange)
+
 
 ## Overview
 
@@ -46,7 +54,7 @@ The project follows the **Model-View-Controller (MVC)** design pattern:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/kon-f/MVC_Telecom_Billing_Project
    ```
 
 2. Open the solution in **Visual Studio 2022**.
@@ -152,9 +160,17 @@ The project follows the **Model-View-Controller (MVC)** design pattern:
 ![NoBills](screenshots/25_No_Bills.png)
 
 ### 📬 Bills Available
-![YesBills](screenshots/25_Yes_Bills.png)
+![YesBills](screenshots/25_Yes_Bills.png)  
 
 ## Notes
 
 - `appsettings.json` is excluded from version control.
 - The system is for educational purposes only and lacks full authentication/security handling.
+
+## 📄 License
+
+This project is licensed under the MIT License.  
+You are free to use, modify, and distribute this software, provided that the original copyright notice and this permission notice are included.
+
+See the **LICENSE** file for details.
+
