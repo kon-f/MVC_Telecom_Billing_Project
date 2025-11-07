@@ -1,4 +1,5 @@
 # Telecom Client Billing & Management Web Application
+![C#](https://img.shields.io/badge/language-C%23-178600?logo=csharp&logoColor=white)
 ![Static Badge](https://img.shields.io/badge/Platform-Web-blue)
 ![Static Badge](https://img.shields.io/badge/Framework-ASP.NET%20MVC-purple)
 ![Static Badge](https://img.shields.io/badge/ORM-Entity%20Framework%20Core-green)
