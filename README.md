@@ -1,55 +1,119 @@
 # Telecom Client Billing & Management Web Application
-![C#](https://img.shields.io/badge/language-C%23-178600?logo=csharp&logoColor=white)
-![Static Badge](https://img.shields.io/badge/Platform-Web-blue)
-![Static Badge](https://img.shields.io/badge/Framework-ASP.NET%20MVC-purple)
-![Static Badge](https://img.shields.io/badge/ORM-Entity%20Framework%20Core-green)
-![Static Badge](https://img.shields.io/badge/Database-SQL%20Server-lightgrey)
-![Static Badge](https://img.shields.io/badge/Status-Completed-success)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Static Badge](https://img.shields.io/badge/Project%20Type-University%20Project-orange)
+
+<p align="center">
+    <!-- Backend -->
+  <img src="https://img.shields.io/badge/.NET%208%20LTS-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
+  <img src="https://img.shields.io/badge/ASP.NET%20Core%20MVC-5C2D91?style=for-the-badge&logo=dotnet&logoColor=white" />
+  <img src="https://img.shields.io/badge/C%23-239120.svg?style=for-the-badge&logo=c-sharp&logoColor=white" />
+
+  <!-- ORM / Database -->
+  <img src="https://img.shields.io/badge/EF%20Core-9.0-68217A?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white" />
+
+  <!-- Frontend -->
+  <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white" />
+  <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" />
+  <img src="https://img.shields.io/badge/CSS3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" />
+
+  <!-- Other  -->
+  <img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Project%20Type-University%20Project-orange?style=for-the-badge" />
+</p>
 
 
 ## Overview
 
-This is a mid-course small university project developed using **ASP.NET Core MVC** and **SQL Server**. The application simulates a complete billing and client management system for a telecom service provider. It features role-based functionality for different types of users.
+This is a university project developed using **ASP.NET Core MVC**, **SQL Server**, and **Entity Framework Core**.  
+
+It simulates a complete telecom billing service ecosystem with:
+
+- Role-based interfaces (Admin, Seller, Client)
+
+- Client management workflows
+
+- Billing functionalities
+
+- Program/Plan assignment and modification
+
+- Session-based role handling
+
+- Database-driven design using EF Core 9
+
+Although designed for educational purposes, the project follows real-world application architecture practices (MVC, layered logic, DB normalization).
 
 ## Features
 
-### 🔐 Login
-- Basic login form for all users.
-- Session/role management not fully implemented.
+### 🔐 Authentication & Session
+- Simple login system (username/password)
+- Session-based role selection
+- Three distinct user flows
 
-### 👤 Client
-- View personal bills
-- View call history
-- Pay bills 
+### 👤 Client Features
+- View billing history  
+- View call history  
+- Pay bills  
 
-### 🧑‍💼 Seller
-- Register new clients
-- Issue client bills
-- Assign clients to billing plans
+### 🧑‍💼 Seller Features
+- Register new clients  
+- Issue bills to clients  
+- Assign/change client plans  
+- Validate unique usernames & phone numbers  
 
-### 🛠️ Administrator
-- Create new sellers
-- Create billing plans
-- Modify billing plan details (e.g., flat rates)
+### 👑 Administrator Features
+- Create new sellers  
+- Create & edit billing plans  
+- Modify program rates, names, or assign permissions  
+
+---
 
 ## Architecture
 
 The project follows the **Model-View-Controller (MVC)** design pattern:
 
-- **Models:** Represent entities like `Client`, `Seller`, `Bill`, `Call`, `Plan`, etc.
-- **Views:** Razor pages separated by user roles.
+- **Models:** Represent entities like `User`, `Client`, `Seller`, `Bill`, `Call`, `Plan`, etc.
+- **Views:** Razor pages organized by user role (Admin, Seller, Client)
 - **Controllers:** Handle user input and business logic.
-- **Database:** Handled via `MVCDBContext` using **Entity Framework Core**.
+- **Database:** A structured relational schema handled via `MVCDBContext` using **Entity Framework Core**.
+
+---
+
+## ⚙️ Internal Architecture & Dependency Injection
+
+The application uses ASP.NET Core’s **built‑in Dependency Injection (DI)** container.  
+Key registered services in `Program.cs` include:
+
+- `AddControllersWithViews()` — Enables MVC and Razor views  
+- `AddDbContext<MVCDBContext>()` — Registers EF Core DbContext (SQL Server)  
+- `AddSession()` — Enables session-based role and state handling  
+
+These services are injected into controllers using constructor injection, keeping the architecture modular and testable.
+
+---
+
+## 🔧 ASP.NET Core Middleware Pipeline
+
+The application uses the standard ASP.NET Core middleware pipeline, including:
+
+- `UseHttpsRedirection()` — Enforces HTTPS  
+- `UseStaticFiles()` — Serves static assets (CSS, JS, images)  
+- `UseRouting()` — Enables endpoint routing  
+- `UseAuthorization()` — Handles authorization middleware  
+- `UseSession()` — Activates session state for logged‑in users  
+
+---
 
 ## Technologies Used
 
-- ASP.NET Core MVC
-- C# (.NET 6 or later)
-- Entity Framework Core
-- Microsoft SQL Server 2022
-- Visual Studio 2022
+- **ASP.NET Core MVC (.NET 8)**
+- **C#**
+- **Entity Framework Core 9**
+- **Microsoft SQL Server 2022**
+- **Razor Views**
+- **Bootstrap 5**
+- **HTML5 / CSS3**
+- **Visual Studio 2022**
+
+---
 
 ## Getting Started
 
@@ -83,90 +147,122 @@ The project follows the **Model-View-Controller (MVC)** design pattern:
 
 6. Run the app.
 
-## Screenshots
+---
 
-### Database Schema (Designed in Microsoft SQL Management Studio)
-![Database Schema](screenshots/DB_Schema.png)
+## 📸 Screenshots
 
-### 🔐 Login Page
-![LoginPage](screenshots/5_Login.png)
+### 📊 Database Schema
+<p align="center">
+  <img src="screenshots/DB_Schema.png" width="600"/>
+</p>
 
-### ❌ Failed Login
-![FailedLogin](screenshots/6_Fail_Login.png)
+### 🔐 Authentication
 
-### 👑 Admin Logged In
-![AdminLogin](screenshots/7_Admin_Menu.png)
+<table>
+<tr>
+<td><img src="screenshots/5_Login.png" width="100%"></td>
+<td><img src="screenshots/6_Fail_Login.png" width="100%"></td>
+</tr>
+</table>
 
-### 📃 List Existing Sellers
-![Sellers](screenshots/8_List_Existing_Sellers.png)
+### 👑 Admin Dashboard & Seller Management
 
-### ➕ Create Seller
-![CreateSeller](screenshots/9_Create_Seller.png)
+<p align="center">
+  <img src="screenshots/7_Admin_Menu.png" width="45%" />
+</p>
 
-### ⚠️ Create Seller Fail
-![CreateSellerFail](screenshots/9_FaiI.png)
+<table>
+<tr>
+<td><img src="screenshots/8_List_Existing_Sellers.png" width="100%"></td>
+<td><img src="screenshots/10_Seller_Created.png" width="100%"></td>
+</tr>
+</table>
 
-### ✅ Seller Created
-![SellerCreated](screenshots/10_Seller_Created.png)
+<table>
+<tr>
+<td><img src="screenshots/9_Create_Seller.png" width="100%"></td>
+<td><img src="screenshots/9_FaiI.png" width="100%"></td>
+</tr>
+</table>
 
-### ⚙️ Modify Programs
-![ModifyPrograms](screenshots/11_Modify_Programs.png)
+### 📝 Program Management (Admin)
 
-### 📝 Modified Programs
-![ModifiedPrograms](screenshots/12_Modified_Programs.png)
+<table>
+<tr>
+<td><img src="screenshots/11_Modify_Programs.png" width="100%"></td>
+<td><img src="screenshots/12_Modified_Programs.png" width="100%"></td>
+</tr>
+</table>
 
-### ➕ Create Program
-![CreateProgram](screenshots/13_Create_Program.png)
+<table>
+<tr>
+<td><img src="screenshots/13_Create_Program.png" width="100%"></td>
+<td><img src="screenshots/13_Create_Program_Fail.png" width="100%"></td>
+</tr>
+</table>
 
-### ❌ Create Program Fail
-![CreateProgramFail](screenshots/13_Create_Program_Fail.png)
+<p align="center">
+  <img src="screenshots/14_New_Programs.png" width="45%" />
+</p>
 
-### 📋 View New Programs
-![NewPrograms](screenshots/14_New_Programs.png)
+### 👤 Client Interface
 
-### 👤 Client Menu
-![ClientMenu](screenshots/15_Client_Menu.png)
+<table>
+<tr>
+<td><img src="screenshots/15_Client_Menu.png" width="100%"></td>
+<td><img src="screenshots/16_Call_History.png" width="100%"></td>
+</tr>
+</table>
 
-### 📞 Call History
-![CallHistory](screenshots/16_Call_History.png)
+<table>
+<tr>
+<td><img src="screenshots/17_View_Bills.png" width="100%"></td>
+<td><img src="screenshots/18_Pay_Bill.png" width="100%"></td>
+</tr>
+</table>
 
-### 📄 View Bills
-![ViewBills](screenshots/17_View_Bills.png)
+### 🧾 Seller Tools
 
-### 💳 Pay Bill
-![PayBill](screenshots/18_Pay_Bill.png)
+<p align="center">
+  <img src="screenshots/19_Seller_Menu.png" width="45%" />
+</p>
 
-### 🧾 Seller Menu
-![SellerMenu](screenshots/19_Seller_Menu.png)
+<table>
+<tr>
+<td><img src="screenshots/20_Change_Client_Program.png" width="100%"></td>
+<td><img src="screenshots/21_Changed_Client_Program.png" width="100%"></td>
+</tr>
+</table>
 
-### 🔄 Change Client Program
-![ChangeClientProgram](screenshots/20_Change_Client_Program.png)
+<table>
+<tr>
+<td><img src="screenshots/22_Add_Client.png" width="100%"></td>
+<td><img src="screenshots/22_Add_Client_Fail.png" width="100%"></td>
+</tr>
+</table>
 
-### ✅ Client Program Changed
-![ClientProgramChanged](screenshots/21_Changed_Client_Program.png)
+<table>
+<tr>
+<td><img src="screenshots/23_Client_Added.png" width="100%"></td>
+<td><img src="screenshots/24_Issue_Bill.png" width="100%"></td>
+</tr>
+</table>
 
-### ➕ Add Client
-![AddClient](screenshots/22_Add_Client.png)
-
-### ❌ Add Client Fail
-![AddClientFail](screenshots/22_Add_Client_Fail.png)
-
-### ✅ Client Added
-![ClientAdded](screenshots/23_Client_Added.png)
-
-### 🧾 Issue Bill
-![IssueBill](screenshots/24_Issue_Bill.png)
-
-### 📭 No Bills Available
-![NoBills](screenshots/25_No_Bills.png)
-
-### 📬 Bills Available
-![YesBills](screenshots/25_Yes_Bills.png)  
+<table>
+<tr>
+<td><img src="screenshots/25_No_Bills.png" width="100%"></td>
+<td><img src="screenshots/25_Yes_Bills.png" width="100%"></td>
+</tr>
+</table>
+  
+---
 
 ## Notes
 
 - `appsettings.json` is excluded from version control.
-- The system is for educational purposes only and lacks full authentication/security handling.
+- Project is for **educational purposes**; authentication is simplified.
+
+---
 
 ## 📄 License
 
