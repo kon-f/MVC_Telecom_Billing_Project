@@ -1,4 +1,8 @@
-﻿using Microsoft.EntityFrameworkCore;
+/// <summary>
+/// Application database context using Entity Framework Core.
+/// Defines all entity sets and configures model behavior.
+/// </summary>
+using Microsoft.EntityFrameworkCore;
 using MVCproject.Models;
 
 
