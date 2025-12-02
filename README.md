@@ -23,9 +23,7 @@
 
 ## Overview
 
-This is a university project developed using **ASP.NET Core MVC**, **SQL Server**, and **Entity Framework Core**.  
-
-It simulates a complete telecom billing service ecosystem with:
+A full web application built with ASP.NET Core MVC, SQL Server, and Entity Framework Core, simulating a complete telecom billing and client-management ecosystem with:
 
 - Role-based interfaces (Admin, Seller, Client)
 
